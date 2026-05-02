@@ -1,5 +1,6 @@
 // This parent class holds all basic attributes an "entity" object has
 // Anything that appears on the map is an "entity"
+#pragma once
 
 #include <string>
 

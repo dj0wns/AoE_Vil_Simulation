@@ -1,4 +1,5 @@
 // File holding all of the useful enums in the codebase
+#pragma once
 
 namespace Enums {
 
@@ -19,6 +20,17 @@ enum PlayerName {
   GAIA,
   PLAYER_ONE,
   PLAYER_TWO
+};
+
+enum ConditionType {
+  IMMEDIATELY,
+  VILLAGER_COUNT,
+  TIME
+};
+
+enum LogicalConnective {
+  AND,
+  OR
 };
 
 enum CommandAction {
