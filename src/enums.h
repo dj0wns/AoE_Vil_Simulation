@@ -19,7 +19,6 @@ enum Resources {
 enum PlayerName {
   GAIA,
   PLAYER_ONE,
-  PLAYER_TWO
 };
 
 enum ConditionType {

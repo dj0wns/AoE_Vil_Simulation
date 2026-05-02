@@ -18,4 +18,4 @@ class Condition {
     Enums::ConditionType condition;
     double value;
 
-}
+};
