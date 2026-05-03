@@ -2,11 +2,10 @@
 // Specific things units can do is move
 #pragma once
 
-#include<string>
+#include <string>
 
 #include "entity.h"
 #include "enums.h"
-
 
 class Unit : public Entity {
   public:
@@ -54,23 +53,23 @@ class Unit : public Entity {
       return base_reload_time;
     }
 
-    virtual void attack_delay() {
+    virtual void get_attack_delay() {
       return base_attack_delay;
     }
 
     virtual void get_damage() {
-      return base_damage;
+      return get_base_damage;
     }
 
     // At this level units handle combat and movement
     virtual void work(double time);
 
   protected:
-    double base_move_speed;
-    double base_reload_time;
-    double base_attack_delay;
+    const double base_move_speed;
+    const double base_reload_time;
+    const double base_attack_delay;
     // TODO: Additional damage classes can come later
-    double base_damage;
+    const double base_damage;
     // destination is negative if no current destination
     double destination_x = -1;
     double destination_y = -1;

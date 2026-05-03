@@ -24,6 +24,18 @@ enum Technologies {
   WHEELBARROW,
 };
 
+enum VillagerTasks {
+  MINING,
+  TREES,
+  STRAGGLER_TREES
+  FORAGING,
+  HUNTING,
+  SHEPHERDING,
+  BUILDING,
+  LURING,
+  NONE
+};
+
 enum PlayerName {
   GAIA,
   PLAYER_ONE,
