@@ -16,6 +16,14 @@ enum Resources {
   NONE,
 };
 
+enum Technologies {
+  DOUBLE_BIT_AXE,
+  HORSE_COLLAR,
+  GOLD_MINING,
+  LOOM,
+  WHEELBARROW,
+};
+
 enum PlayerName {
   GAIA,
   PLAYER_ONE,

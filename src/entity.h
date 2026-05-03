@@ -6,27 +6,34 @@
 
 #include "enums.h"
 
+class Player;
+
 class Entity {
 
   public:
     Entity(
         double x,
         double y,
+        double hp,
         Enums::HitboxShape hitbox_shape,
         double width) :
       x(x),
       y(y),
+      hp(hp),
       hitbox_shape(hitbox_shape),
       width(width) {}
 
-    std::string entity_type() = 0;
+    virtual std::string entity_type() = 0;
 
     // Execute this entities job for the given time period
-    void work(double time) = 0;
+    virtual void work(double time) = 0;
 
     // Center Position in world space
     double x;
     double y;
+
+    // all entities have some sort of hitpoints
+    double hp;
     // hitbox shape -- TODO, for now we will ignore all hitboxes
     Enums::HitboxShape hitbox_shape;
     // hitbox size (for square -- its same both dimensions, for circle its a radius)
@@ -36,7 +43,7 @@ class Entity {
     double held_resource_amount = 0;
 
     // Owning player
-    Enums::PlayerName player_name;
+    const Player& owning_player;
 
     std::string entity_name;
 
